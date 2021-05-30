@@ -366,7 +366,7 @@
           </address>
         </div>
         <div class="footer-social">
-          <h3 class="social-title">Присоединяйтесь</h3>
+          <h3 class="footer-title">Присоединяйтесь</h3>
           <ul class="footer-social-list list">
             <li>
               <a href="#" class="footer-social-link">
@@ -398,6 +398,13 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <h3 class="footer-title">Подпишитесь на рассылку</h3>
+          <div class="footer-subscribe-items">
+            <input class="footer-input" type="email" placeholder="E-mail" />
+            <button type="submit" class="footer-button">Подписаться</button>
+          </div>
+        </div>
       </div>
     </footer>
     <!--Backdrop-->
@@ -413,22 +420,31 @@
 
         <ul class="modal-input-list">
           <li class="modal-input-item">
-            <label for="name">Имя</label>
-            <input type="text" name="name" id="name" />
+            <label for="name" class="input-label">Имя</label>
+            <input type="text" name="name" id="name" class="input-text-box" />
           </li>
           <li class="modal-input-item">
-            <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" />
+            <label for="tel" class="input-label">Телефон</label>
+            <input type="tel" name="tel" id="tel" class="input-text-box" />
           </li>
           <li class="modal-input-item">
-            <label for="email">Почта</label>
-            <input type="email" name="email" id="email" />
+            <label for="email" class="input-label">Почта</label>
+            <input type="email" name="email" id="email" class="input-text-box" />
           </li>
           <li class="modal-input-item">
-            <label for="comment">Комментарий</label>
-            <textarea name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
+            <label for="comment" class="input-label">Комментарий</label>
+            <textarea
+              class="input-comment-box"
+              name="comment"
+              id="comment"
+              placeholder="Введите текст"
+            ></textarea>
           </li>
         </ul>
+        <p class="license-text">
+          Соглашаюсь с рассылкой и принимаю <a href="#" class="license-link">Условия договора</a>
+        </p>
+        <button type="submit" class="button-submit">Отправить</button>
       </form>
     </div>
     <script src="./js/modal.js"></script>

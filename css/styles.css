@@ -611,7 +611,8 @@ img {
 }
 
 .footer-button {
-  padding: 0;
+  display: block;
+  padding: 10px 62px 10px 29px;
   width: 200px;
   height: 50px;
   background: var(--accent-text-color);
@@ -633,6 +634,17 @@ img {
 .footer-button:hover,
 .footer-button:focus {
   background-color: var(--hero-button-hover-color);
+}
+
+.footer-button::after {
+  /*   position: absolute;
+  top: 13px;
+  right: 28px;
+ */
+  content: '';
+  width: 24px;
+  height: 24px;
+  border: 1px solid tomato;
 }
 /*============Backdrop==============*/
 .backdrop {
@@ -701,10 +713,26 @@ img {
   color: var(--primary-text-color);
 }
 .modal-input-item {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
+.modal-input-item:hover .input-text-box {
+  border: 1px solid var(--accent-text-color);
+}
+.modal-input-item:hover .input-icon {
+  fill: var(--accent-text-color);
+}
+.modal-input-item:focus-within .input-text-box {
+  outline: none;
+  border: 1px solid var(--accent-text-color);
+}
+.modal-input-item:focus-within .input-icon {
+  fill: var(--accent-text-color);
+}
+
 .input-label {
+  position: relative;
   margin-bottom: 4px;
 
   font-weight: 400;
@@ -712,6 +740,17 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
+}
+.input-icon {
+  position: absolute;
+  top: 29px;
+  left: 12px;
+
+  width: 18px;
+  height: 18px;
+  fill: var(--primary-text-color);
+
+  transition: fill var(--default-transition-delay) var(--default-transition-timing);
 }
 .input-text-box {
   min-height: 40px;
@@ -722,10 +761,6 @@ img {
   margin-bottom: 10px;
 
   transition: border var(--default-transition-delay) var(--default-transition-timing);
-}
-
-.input-text-box:hover {
-  border: 1px solid var(--accent-text-color);
 }
 
 .input-comment-box {
@@ -749,9 +784,11 @@ img {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.license-text {
-  padding-left: 36px;
-  padding-right: 11px;
+
+.license-label {
+  display: block;
+  margin-left: 36px;
+  margin-right: 11px;
   margin-bottom: 30px;
 
   font-weight: 400;
@@ -759,6 +796,22 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+.license-origin-cb {
+  /*    position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+ */
+  .license-cb {
+  }
 }
 .license-link {
   font-weight: 400;

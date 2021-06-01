@@ -401,7 +401,7 @@
         <div class="footer-subscribe">
           <h3 class="footer-title">Подпишитесь на рассылку</h3>
           <div class="footer-subscribe-items">
-            <input class="footer-input" type="email" placeholder="E-mail" />
+            <input class="footer-input" name="subscribe-email" type="email" placeholder="E-mail" />
             <button type="submit" class="footer-button">Подписаться</button>
           </div>
         </div>
@@ -422,14 +422,23 @@
           <li class="modal-input-item">
             <label for="name" class="input-label">Имя</label>
             <input type="text" name="name" id="name" class="input-text-box" />
+            <svg class="input-icon">
+              <use href="./images/icons.svg#input-name"></use>
+            </svg>
           </li>
           <li class="modal-input-item">
             <label for="tel" class="input-label">Телефон</label>
             <input type="tel" name="tel" id="tel" class="input-text-box" />
+            <svg class="input-icon">
+              <use href="./images/icons.svg#input-phone"></use>
+            </svg>
           </li>
           <li class="modal-input-item">
             <label for="email" class="input-label">Почта</label>
             <input type="email" name="email" id="email" class="input-text-box" />
+            <svg class="input-icon">
+              <use href="./images/icons.svg#input-email"></use>
+            </svg>
           </li>
           <li class="modal-input-item">
             <label for="comment" class="input-label">Комментарий</label>
@@ -441,9 +450,13 @@
             ></textarea>
           </li>
         </ul>
-        <p class="license-text">
-          Соглашаюсь с рассылкой и принимаю <a href="#" class="license-link">Условия договора</a>
-        </p>
+
+        <label class="license-label">
+          <input type="checkbox" name="license-origin-cb" class="license-origin-cb" />
+          <span class="license-cb"></span>
+          Соглашаюсь с рассылкой и принимаю
+          <a href="#" class="license-link">Условия договора</a>
+        </label>
         <button type="submit" class="button-submit">Отправить</button>
       </form>
     </div>

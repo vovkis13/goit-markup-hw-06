@@ -819,6 +819,7 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .license-svg-cb {
   width: 16px;
   height: 15px;
@@ -831,7 +832,9 @@ img {
   transition: fill var(--default-transition-delay) var(--default-transition-timing);
   
 }
-
+.license-origin-cb:focus + .license-svg-cb {
+  border: 2px solid var(--accent-text-color);
+}
 .license-origin-cb:checked + .license-svg-cb {
   fill: var(--accent-text-color);
   border: none;
@@ -843,7 +846,6 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  text-decoration-line: underline;
   color: var(--accent-text-color);
 }
 

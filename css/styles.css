@@ -515,6 +515,7 @@ img {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-addr {
   min-width: 231px;
@@ -549,7 +550,6 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-social {
-  margin-top: 12px;
   margin-right: 93px;
 }
 .footer-title {
@@ -832,9 +832,14 @@ img {
   transition: fill var(--default-transition-delay) var(--default-transition-timing);
   
 }
+.license-label:hover .license-svg-cb {
+  border: 2px solid var(--accent-text-color);
+}
+
 .license-origin-cb:focus + .license-svg-cb {
   border: 2px solid var(--accent-text-color);
 }
+
 .license-origin-cb:checked + .license-svg-cb {
   fill: var(--accent-text-color);
   border: none;
